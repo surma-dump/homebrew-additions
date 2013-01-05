@@ -16,6 +16,7 @@ class Go < Formula
   def caveats; <<-EOS.undent
     Add these to your shell profile:
       export GOROOT="#{prefix}"
+      export PATH=$GOROOT/bin:$PATH
     EOS
   end
 end
