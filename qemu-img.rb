@@ -1,10 +1,9 @@
 require 'formula'
-require 'qemu'
 
 class QemuImg < Formula
-  homepage Qemu.homepage
-  url Qemu.url
-  sha256 Qemu.sha256
+  qemu = Formula.factory('qemu')
+  homepage qemu.homepage
+  url qemu.url
 
   depends_on 'glib'
 
