@@ -1,6 +1,6 @@
 require 'formula'
 
-class Go < Formula
+class GoSrc < Formula
   homepage 'http://golang.org'
   url 'https://code.google.com/p/go', :using => :hg, :branch => 'release'
   version '1.0.3'
