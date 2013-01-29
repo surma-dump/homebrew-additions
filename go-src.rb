@@ -6,6 +6,9 @@ class GoSrc < Formula
   version '1.0.3'
 
   def install
+    Dir.chdir "#{downloader.cached_location}" do
+      system "hg checkout release --clean"
+    end
     cp_r Dir["#{downloader.cached_location}/*", "#{downloader.cached_location}/.hg*"], "#{prefix}"
     ENV['GOROOT'] = "#{prefix}"
     Dir.chdir "#{prefix}/src" do
