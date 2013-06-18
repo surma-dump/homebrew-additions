@@ -3,7 +3,7 @@ require 'formula'
 class GoSrc < Formula
   homepage 'http://golang.org'
   url 'https://code.google.com/p/go', :using => :hg, :branch => 'release'
-  version '1.1'
+  version '1.1.1'
 
   def install
     Dir.chdir "#{downloader.cached_location}" do
